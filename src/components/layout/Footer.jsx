@@ -6,24 +6,24 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6">
+    <footer className="bg-slate-900 text-white pt-12 pb-6">
       <div className="container-max">
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary-400">Aria Event</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary-500">Aria Event</h3>
             <p className="text-gray-400 mb-4">
               אטרקציות מובילות לאירועים בישראל - זיכרונות בלתי נשכחים עבור חתונות, בר מצווה ואירועים עסקיים.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="p-2 bg-gray-800 hover:bg-primary-600 rounded-lg transition-colors">
+              <a href="#" className="p-2 bg-primary-600 hover:bg-primary-500 rounded-full transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="p-2 bg-gray-800 hover:bg-primary-600 rounded-lg transition-colors">
+              <a href="#" className="p-2 bg-primary-600 hover:bg-primary-500 rounded-full transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-gray-800 hover:bg-primary-600 rounded-lg transition-colors">
+              <a href="#" className="p-2 bg-primary-600 hover:bg-primary-500 rounded-full transition-colors">
                 <Youtube size={20} />
               </a>
             </div>

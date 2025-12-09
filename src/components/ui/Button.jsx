@@ -9,11 +9,11 @@ const Button = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer'
+  const baseStyles = 'font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer'
 
   const variants = {
-    primary: 'bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 shadow-lg hover:shadow-glow-lg border border-primary-400',
-    secondary: 'bg-gradient-to-r from-secondary-500 to-secondary-600 text-white hover:from-secondary-600 hover:to-secondary-700 active:from-secondary-700 active:to-secondary-800 shadow-lg hover:shadow-glow-purple border border-secondary-400',
+    primary: 'bg-gradient-to-r from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 shadow-lg hover:shadow-glow-lg border-2 border-primary-300',
+    secondary: 'bg-gradient-to-r from-secondary-500 to-secondary-600 text-white hover:from-secondary-600 hover:to-secondary-700 active:from-secondary-700 active:to-secondary-800 shadow-lg hover:shadow-glow-purple border-2 border-secondary-300',
     outline: 'border-2 border-primary-500 text-primary-600 hover:bg-primary-50 active:bg-primary-100 font-bold hover:shadow-glow-md',
     ghost: 'text-primary-600 hover:bg-primary-50 active:bg-primary-100 font-bold',
   }

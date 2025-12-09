@@ -108,20 +108,11 @@ const Home = () => {
               </Button>
             </Link>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <ArrowDown size={32} className="text-white" />
-          </motion.div>
         </motion.div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
         <div className="container-max">
           <motion.div
             className="text-center mb-16"
@@ -199,7 +190,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-secondary-50 to-gray-50">
+      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
         <div className="container-max">
           <motion.div
             className="text-center mb-16"
@@ -245,7 +236,7 @@ const Home = () => {
       </section>
 
       {/* Blog Preview */}
-      <section className="py-20 bg-gradient-to-br from-white via-accent-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-white via-primary-50 to-accent-50">
         <div className="container-max">
           <motion.div
             className="text-center mb-16"
@@ -291,7 +282,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-500 text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-600 text-white relative overflow-hidden">
         <motion.div
           className="absolute inset-0 opacity-10"
           animate={{ y: [0, 20, 0] }}
@@ -315,7 +306,7 @@ const Home = () => {
               צרו קשר איתנו היום ובואו נתחיל בתכנון האירוע שלכם
             </p>
             <Link to="/contact">
-              <Button variant="ghost" size="lg" className="cta-glow !text-white !bg-white bg-opacity-20 hover:!bg-opacity-40 font-bold">
+              <Button variant="primary" size="lg" className="cta-glow !bg-white !text-primary-600 hover:!bg-gray-100 font-bold">
                 צור קשר עכשיו ✨
               </Button>
             </Link>
