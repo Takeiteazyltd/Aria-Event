@@ -79,12 +79,12 @@ const Home = () => {
             className="flex items-center justify-center gap-2 mb-6"
           >
             <Sparkles className="text-yellow-400" />
-            <span className="text-lg font-semibold">אטרקציות מובילות לאירועים בישראל</span>
+            <span className="text-lg font-semibold">צילום וצילומי וידאו מקצועיים</span>
             <Sparkles className="text-yellow-400" />
           </motion.div>
 
           <h1 className="hero-title mb-6 font-bold">
-            האטרקציות המושלמות לאירוע שלך
+            זיכרונות בלתי נשכחים לאירוע שלך
           </h1>
 
           <p className="hero-subtitle mb-8 text-gray-100">
