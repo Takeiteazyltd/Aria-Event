@@ -39,7 +39,7 @@ const Header = () => {
       <div className="container-max flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 hover:scale-105 transition-transform">
-          <h1 className="text-2xl font-bold text-gradient-enhanced">Aria Event</h1>
+          <h1 className="text-2xl font-bold text-gradient-enhanced">Photostyle</h1>
         </Link>
 
         {/* Desktop Navigation */}

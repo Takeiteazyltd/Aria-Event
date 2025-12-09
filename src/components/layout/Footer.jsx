@@ -12,9 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary-500">Aria Event</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary-500">Photostyle</h3>
             <p className="text-gray-400 mb-4">
-              אטרקציות מובילות לאירועים בישראל - זיכרונות בלתי נשכחים עבור חתונות, בר מצווה ואירועים עסקיים.
+              שירותי צילום וצילומי וידאו מקצועיים לאירועים בישראל - זיכרונות בלתי נשכחים עבור חתונות, בר מצווה ואירועים עסקיים.
             </p>
             <div className="flex gap-3">
               <a href="#" className="p-2 bg-primary-600 hover:bg-primary-500 rounded-full transition-colors">

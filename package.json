@@ -1,7 +1,7 @@
 {
-  "name": "aria-event",
+  "name": "photostyle",
   "version": "1.0.0",
-  "description": "Website for Aria event company",
+  "description": "Professional photography and videography website for Photostyle",
   "type": "module",
   "scripts": {
     "dev": "vite",

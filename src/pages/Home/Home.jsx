@@ -48,8 +48,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Aria Event - אטרקציות מובילות לאירועים בישראל</title>
-        <meta name="description" content="אטרקציות וחוויות בלתי נשכחות לחתונות, בר מצווה ואירועים עסקיים בישראל" />
+        <title>Photostyle - צילום וצילומי וידאו לאירועים בישראל</title>
+        <meta name="description" content="שירותי צילום וצילומי וידאו מקצועיים לחתונות, בר מצווה ואירועים עסקיים בישראל" />
       </Helmet>
 
       {/* Hero Section */}
