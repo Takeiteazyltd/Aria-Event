@@ -8,14 +8,14 @@ const BusinessEvents = () => {
   return (
     <>
       <Helmet>
-        <title>אירועים עסקיים | Aria Event</title>
+        <title>אירועי חברה | Aria Event</title>
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[500px] flex items-center justify-center pt-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="relative min-h-[500px] flex items-center justify-center pt-20 bg-primary-500 text-brand-navy">
         <div className="container-max text-center">
-          <h1 className="text-5xl font-bold mb-4">אירועים עסקיים</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold mb-4">אירועי חברה</h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto font-bold">
             פתרונות אטרקציות מיוחדות לחברות - בנייה של צוויות, אירועי משקיעים, והשקות מוצרים
           </p>
           <motion.div
@@ -25,7 +25,7 @@ const BusinessEvents = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="!text-white !border-white hover:!bg-white hover:!text-blue-600">
+              <Button variant="primary" size="lg" className="!bg-brand-navy !text-white !border-none hover:opacity-90 !rounded-full">
                 קבלת הצעה
               </Button>
             </Link>
@@ -34,10 +34,10 @@ const BusinessEvents = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-20">
+      <section className="py-20 bg-brand-beige">
         <div className="container-max">
-          <h2 className="text-4xl font-bold mb-12 text-center">מה אנו מציעים לחברות</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-bold mb-12 text-center text-brand-navy">מה אנו מציעים לחברות</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
             {[
               {
                 title: 'בנייה צוואות',
@@ -54,14 +54,14 @@ const BusinessEvents = () => {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-gray-50 p-8 rounded-xl"
+                className="bg-white p-8 rounded-[2rem] shadow-lg border border-primary-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-brand-navy">{item.title}</h3>
+                <p className="text-gray-600 font-semibold">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -69,14 +69,14 @@ const BusinessEvents = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-20 bg-primary-500 text-brand-navy">
         <div className="container-max text-center">
-          <h2 className="text-4xl font-bold mb-4">בואו נדברים על אירוע שלכם</h2>
-          <p className="text-lg mb-8 opacity-90">
+          <h2 className="text-4xl font-bold mb-4 italic">בואו נדבר על האירוע שלכם</h2>
+          <p className="text-lg mb-8 opacity-95 font-bold">
             צוות המומחים שלנו כאן לשעזור בתכנון האירוע השלם
           </p>
           <Link to="/contact">
-            <Button variant="ghost" size="lg" className="!text-white !bg-white bg-opacity-20 hover:!bg-opacity-30">
+            <Button variant="primary" size="lg" className="!bg-brand-navy !text-white !rounded-full shadow-glow-md">
               צור קשר עכשיו
             </Button>
           </Link>

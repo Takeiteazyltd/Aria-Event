@@ -5,7 +5,7 @@ export const generateOrganizationSchema = () => {
     name: 'Aria Event',
     url: 'https://aria-event.co.il',
     logo: 'https://aria-event.co.il/logo.png',
-    description: 'אטרקציות מובילות לאירועים בישראל - חתונות, בר מצווה, אירועים עסקיים',
+    description: 'אטרקציות מובילות לאירועים בישראל - חתונות, בר מצווה, אירועי חברה',
     contact: {
       '@type': 'ContactPoint',
       telephone: '+972-xx-xxxx-xxx',
