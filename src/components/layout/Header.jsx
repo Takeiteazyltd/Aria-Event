@@ -64,7 +64,7 @@ const Header = () => {
         <div className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'py-2 lg:py-0' : ''}`}>
           <Link to="/" onClick={closeMobileMenu}>
             <img 
-              src="src/public/logos/photostyle-black.png" 
+              src="/logos/photostyle-black.png" 
               alt="Photo Style Logo" 
               className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-14 lg:opacity-0 lg:h-0' : 'h-24 lg:h-32'}`}
             />
@@ -89,7 +89,7 @@ const Header = () => {
           <div className={`hidden lg:block absolute right-0 pr-4 transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
             <Link to="/" onClick={closeMobileMenu}>
               <img 
-                src="src/public/logos/photostyle-black.png" 
+                src="/logos/photostyle-black.png" 
                 alt="Photo Style Logo" 
                 className="w-auto object-contain h-12 transition-all duration-300" 
               />
@@ -114,7 +114,7 @@ const Header = () => {
           <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2 py-1">
             <Link to="/" onClick={closeMobileMenu}>
               <img 
-                src="src/public/logos/photostyle-black.png" 
+                src="/logos/photostyle-black.png" 
                 alt="Photo Style Logo" 
                 className="w-auto object-contain h-12 transition-all duration-300" 
               />

@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Column 1: Logo & Social */}
           <div className="flex flex-col items-center lg:items-start">
             <Link to="/" className="mb-6">
-              <img src="src/public/logos/photostyle-black.png" alt="Photo Style" className="h-20 w-auto object-contain" />
+              <img src="/logos/photostyle-black.png" alt="Photo Style" className="h-20 w-auto object-contain" />
             </Link>
             <p className="text-[#1a1a1a] mb-8 text-center lg:text-right font-bold opacity-90 leading-relaxed">
               הופכים כל אירוע לחוויה בלתי נשכחת עם הצילום המקצועי והאטרקציות הכי חדישות בשוק.
