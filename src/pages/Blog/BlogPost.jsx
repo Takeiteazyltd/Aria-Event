@@ -27,7 +27,7 @@ const BlogPost = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="pt-20 pb-10">
+      <section className="pt-36 pb-4">
         <div className="container-max max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

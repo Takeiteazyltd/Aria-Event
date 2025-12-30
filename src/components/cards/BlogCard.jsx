@@ -7,21 +7,20 @@ import Badge from '../ui/Badge'
 
 const BlogCard = ({ post }) => {
   return (
-    <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.3 }}>
+    <motion.div transition={{ duration: 0.3 }}>
       <Link to={`/blog/${post.slug}`}>
-        <Card hoverable className="h-full flex flex-col overflow-hidden">
+        <Card hoverable className="h-full flex flex-col overflow-hidden group">
           {/* Image */}
-          <div className="relative overflow-hidden h-40 bg-gray-200">
+          <div className="relative overflow-hidden aspect-[4/3] bg-gray-200">
             <motion.img
               src={post.image || 'https://picsum.photos/seed/blog-card-placeholder/800/600'}
               alt={post.title}
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               onError={(e) => {
                 e.target.src = 'https://picsum.photos/seed/blog-card-placeholder/800/600'
               }}
             />
+            <div className="absolute inset-0 bg-brand-navy opacity-0 group-hover:opacity-10 transition-opacity" />
           </div>
 
           {/* Content */}

@@ -159,16 +159,18 @@ const Home = () => {
           <div ref={categoriesRef} className="keen-slider">
             {topAttractions.map((item) => (
               <div key={item.id} className="keen-slider__slide group cursor-pointer">
-                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md transition-transform hover:scale-[1.02]">
-                  <img 
-                    src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
-                    className="w-full h-full object-cover" 
-                    alt={item.title}
-                    onError={(e) => {
-                      e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
-                    }}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-white/50 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-md">
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-lg">
+                  <div className="absolute inset-0 transition-transform duration-300 group-hover:scale-[1.10]">
+                    <img 
+                      src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
+                      className="w-full h-full object-cover" 
+                      alt={item.title}
+                      onError={(e) => {
+                        e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
+                      }}
+                    />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-4 bg-white/50 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-md z-10">
                     <span className="font-bold text-[#1a1a1a]">{item.title}</span>
                     <div className="bg-[#1a1a1a] p-2 rounded-full"><ChevronLeft size={16} className="text-brand-cream" /></div>
                   </div>
@@ -212,7 +214,7 @@ const Home = () => {
             {topAttractions.slice(0, 4).map((item) => (
               <motion.div
                 key={item.id}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-md border border-gray-50 flex flex-col group"
+                className="bg-white rounded-[2rem] overflow-hidden shadow-md border border-gray-50 flex flex-col group transition-shadow duration-300 hover:shadow-lg"
               >
                 <div className="w-full aspect-square overflow-hidden relative">
                   <img 

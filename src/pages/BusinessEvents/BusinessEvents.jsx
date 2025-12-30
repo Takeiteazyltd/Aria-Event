@@ -12,10 +12,10 @@ const BusinessEvents = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[500px] flex items-center justify-center pt-20 bg-primary-500 text-brand-navy">
+      <section className="relative min-h-[500px] flex items-center justify-center pt-36 bg-brand-beige text-[#1a1a1a]">
         <div className="container-max text-center">
           <h1 className="text-5xl font-bold mb-4">אירועי חברה</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto font-bold">
+          <p className="text-xl opacity-80 max-w-2xl mx-auto font-bold">
             פתרונות אטרקציות מיוחדות לחברות - בנייה של צוויות, אירועי משקיעים, והשקות מוצרים
           </p>
           <motion.div
@@ -34,7 +34,7 @@ const BusinessEvents = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-brand-beige">
+      <section className="pt-8 pb-20 bg-brand-beige">
         <div className="container-max">
           <h2 className="text-4xl font-bold mb-12 text-center text-[#1a1a1a]">מה אנו מציעים לחברות</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -42,26 +42,47 @@ const BusinessEvents = () => {
               {
                 title: 'בנייה צוואות',
                 description: 'אטרקציות שתחברו את הצוות ותחזקו קשרים',
+                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop',
               },
               {
                 title: 'הערכת עובדים',
                 description: 'פעילויות מהנות שמחזקות מוטיבציה',
+                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop',
               },
               {
                 title: 'אירועים גדולים',
                 description: 'מנהלת מלאה של אירועים בעלי עד 500 משתתפים',
+                image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop',
               },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-8 rounded-[2rem] shadow-md border border-primary-100"
+                className="bg-white rounded-[2rem] overflow-hidden shadow-md border border-gray-50 flex flex-col group transition-shadow duration-300 hover:shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-3 text-[#1a1a1a]">{item.title}</h3>
-                <p className="text-gray-600 font-semibold">{item.description}</p>
+                <div className="w-full aspect-square overflow-hidden relative">
+                  <img 
+                    src={item.image} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    alt={item.title}
+                    onError={(e) => {
+                      e.target.src = 'https://picsum.photos/seed/business-events-placeholder/800/600'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-brand-navy opacity-0 group-hover:opacity-10 transition-opacity" />
+                </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-bold mb-3 text-[#1a1a1a]">{item.title}</h3>
+                  <p className="text-gray-600 font-semibold mb-6">{item.description}</p>
+                  <Link to="/contact" className="mt-auto">
+                    <Button variant="outline" className="w-full !rounded-full">
+                      לפרטים נוספים
+                    </Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>

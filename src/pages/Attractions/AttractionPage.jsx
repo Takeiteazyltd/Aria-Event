@@ -35,7 +35,7 @@ const AttractionPage = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="pt-20 pb-10">
+      <section className="pt-36 pb-4">
         <div className="container-max">
           <h1 className="text-5xl font-bold mb-6">{attraction.title}</h1>
           <Badge variant="primary" size="lg">

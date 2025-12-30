@@ -24,17 +24,17 @@ const Blog = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[400px] flex items-center justify-center pt-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+      <section className="relative min-h-[400px] flex items-center justify-center pt-36 bg-brand-beige text-[#1a1a1a]">
         <div className="container-max text-center">
           <h1 className="text-5xl font-bold mb-4">הבלוג של Photo Style</h1>
-          <p className="text-xl opacity-90">
+          <p className="text-xl opacity-80 font-bold">
             טיפים, השראה ורעיונות לאירוע המושלם
           </p>
         </div>
       </section>
 
       {/* Filters */}
-      <section className="py-10 bg-gray-50 border-b-2 border-gray-200">
+      <section className="pt-6 pb-10 bg-gray-50 border-b-2 border-gray-200">
         <div className="container-max space-y-4">
           <div className="relative">
             <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -43,7 +43,7 @@ const Blog = () => {
               placeholder="חפש מאמר..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-4 pr-12"
+              className="pl-4 pr-12 shadow-none"
             />
           </div>
 
@@ -52,10 +52,10 @@ const Blog = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
+                className={`px-4 py-2 rounded-full font-semibold transition-colors duration-0 shadow-none hover:shadow-none ${
                   selectedCategory === cat
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-200'
+                    ? 'bg-[#1a1a1a] text-brand-cream'
+                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-[#1a1a1a]'
                 }`}
               >
                 {cat}

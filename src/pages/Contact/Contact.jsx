@@ -34,17 +34,17 @@ const Contact = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[300px] flex items-center justify-center pt-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+      <section className="relative min-h-[400px] flex items-center justify-center pt-36 bg-brand-beige text-[#1a1a1a]">
         <div className="container-max text-center">
           <h1 className="text-5xl font-bold mb-4">צור קשר אתנו</h1>
-          <p className="text-xl opacity-90">
+          <p className="text-xl opacity-80 font-bold">
             נשמח לשמוע עוד אודות הפרויקט שלך
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-20">
+      <section className="pt-8 pb-20">
         <div className="container-max grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-1 space-y-8">

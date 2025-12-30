@@ -19,17 +19,17 @@ const Testimonials = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative min-h-[300px] flex items-center justify-center pt-20 bg-gradient-to-r from-secondary-600 to-primary-600 text-white">
+      <section className="relative min-h-[300px] flex items-center justify-center pt-36 bg-brand-beige text-[#1a1a1a]">
         <div className="container-max text-center">
           <h1 className="text-5xl font-bold mb-4">מה הלקוחות שלנו אומרים</h1>
-          <p className="text-xl opacity-90">
+          <p className="text-xl opacity-80 font-bold">
             המלצות מחוזקות מאנשים שחוו את הקסם של Photo Style
           </p>
         </div>
       </section>
 
       {/* Filters */}
-      <section className="py-10 bg-gray-50 border-b-2 border-gray-200">
+      <section className="pt-6 pb-10 bg-gray-50 border-b-2 border-gray-200">
         <div className="container-max">
           <div className="flex flex-wrap gap-2 justify-center">
             {types.map((type) => (

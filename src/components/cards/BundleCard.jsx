@@ -1,21 +1,16 @@
 import React from 'react'
 import { Check } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Card from '../ui/Card'
 import Badge from '../ui/Badge'
 import Button from '../ui/Button'
 
 const BundleCard = ({ bundle }) => {
   return (
-    <motion.div
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.3 }}
-      className={bundle.recommended ? 'ring-2 ring-secondary-500' : ''}
-    >
-      <Card hoverable className={`h-full flex flex-col p-6 ${bundle.recommended ? 'bg-secondary-50' : ''}`}>
+    <div className="h-full">
+      <Card hoverable className={`h-full flex flex-col p-6 rounded-[2rem] shadow-none hover:shadow-none ${bundle.recommended ? 'bg-secondary-50 ring-2 ring-secondary-500' : ' ring-2 ring-secondary-500'}`}>
         {/* Recommended Badge */}
         {bundle.recommended && (
-          <Badge variant="secondary" size="sm" className="w-fit mb-3">
+          <Badge variant="secondary" size="sm" className="w-fit mb-3 bg-brand-pink text-[#1a1a1a]">
             מומלץ!
           </Badge>
         )}
@@ -27,7 +22,7 @@ const BundleCard = ({ bundle }) => {
         <p className="text-gray-600 mb-4">{bundle.description}</p>
 
         {/* Event Type */}
-        <Badge variant="primary" size="sm" className="w-fit mb-4">
+        <Badge variant="custom" size="sm" className="w-fit mb-4">
           {bundle.eventType}
         </Badge>
 
@@ -39,7 +34,7 @@ const BundleCard = ({ bundle }) => {
         </div>
 
         {/* Attractions */}
-        <div className="mb-6">
+        <div className="mb-6 flex-grow">
           <p className="text-sm font-semibold mb-2">כלול באטרקציות:</p>
           <ul className="space-y-2">
             {bundle.features.map((feature, idx) => (
@@ -52,11 +47,11 @@ const BundleCard = ({ bundle }) => {
         </div>
 
         {/* CTA */}
-        <Button variant="secondary" size="lg" className="w-full">
+        <Button variant="secondary" size="lg" className="w-full mt-auto">
           בקש הצעת מחיר
         </Button>
       </Card>
-    </motion.div>
+    </div>
   )
 }
 
