@@ -7,7 +7,7 @@ const LeadForm = () => {
     return (
         <section className="py-16 bg-brand-beige">
             <div className="container-max px-4">
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-md overflow-hidden flex flex-col md:flex-row">
                     {/* Info Side */}
                     <div className="md:w-1/3 bg-brand-pink p-8 text-brand-navy flex flex-col justify-center">
                         <h3 className="text-2xl font-bold mb-4">בואו נתחיל לתכנן!</h3>

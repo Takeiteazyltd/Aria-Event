@@ -54,7 +54,7 @@ const BusinessEvents = () => {
             ].map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white p-8 rounded-[2rem] shadow-lg border border-primary-100"
+                className="bg-white p-8 rounded-[2rem] shadow-md border border-primary-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}

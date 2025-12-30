@@ -42,7 +42,7 @@ const Header = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Top Bar: Social | Logo | Utility - Always visible on mobile, hidden on desktop when scrolled */}
-      <div className={`container-max relative flex items-center transition-all duration-300 ${isScrolled ? 'py-4 px-4 lg:h-0 lg:py-0 lg:overflow-hidden' : 'py-16 px-4 lg:py-16 lg:px-4'}`}>
+      <div className={`container-max relative flex items-center transition-all duration-300 ${isScrolled ? 'py-8 px-4 lg:h-0 lg:py-0 lg:overflow-hidden' : 'py-16 px-4 lg:py-16 lg:px-4'}`}>
         {/* Right: Secondary Links - Desktop only (RTL: on the left) */}
         <div className={`hidden lg:flex items-center justify-start gap-6 text-sm font-bold text-brand-navy transition-all duration-300 flex-1 ${isScrolled ? 'opacity-0 h-0 overflow-hidden' : ''}`}>
           {secondaryLinks.map((link, idx) => (
@@ -66,7 +66,7 @@ const Header = () => {
             <img 
               src="src/public/logos/photostyle-black.png" 
               alt="Photo Style Logo" 
-              className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-12 lg:opacity-0 lg:h-0' : 'h-24 lg:h-32'}`}
+              className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-14 lg:opacity-0 lg:h-0' : 'h-24 lg:h-32'}`}
             />
           </Link>
         </div>

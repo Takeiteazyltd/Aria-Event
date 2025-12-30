@@ -50,7 +50,7 @@ export default {
           pink: '#ffb1b9',
           beige: '#f2f0eb',
           white: '#ffffff',
-          navy: '#E0DDD3',
+          navy: '#EBE8E1',
           cream: '#FFF8E7',
         },
       },

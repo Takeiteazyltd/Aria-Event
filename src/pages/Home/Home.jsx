@@ -120,12 +120,12 @@ const Home = () => {
         <div className="container-max">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-4">יש לכם אירוע?</h2>
-            <p className="text-lg text-brand-navy font-bold opacity-80 italic">בואו נתחיל לתכנן אותו יחד</p>
+            <p className="text-lg text-[#1a1a1a99] font-bold opacity-80 italic">בואו נתחיל לתכנן אותו יחד</p>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="bg-white p-6 md:p-8 rounded-[2rem] shadow-xl max-w-5xl mx-auto"
+            className="bg-white p-6 md:p-8 rounded-[2rem] shadow-md max-w-5xl mx-auto"
           >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <input type="text" placeholder="שם מלא" className="bg-gray-50 border-2 border-gray-200 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink focus:border-2" />
@@ -159,7 +159,7 @@ const Home = () => {
           <div ref={categoriesRef} className="keen-slider">
             {topAttractions.map((item) => (
               <div key={item.id} className="keen-slider__slide group cursor-pointer">
-                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-md transition-transform hover:scale-[1.02]">
                   <img 
                     src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
                     className="w-full h-full object-cover" 
@@ -168,7 +168,7 @@ const Home = () => {
                       e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
                     }}
                   />
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-white/50 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-lg">
+                  <div className="absolute inset-x-0 bottom-0 p-4 bg-white/50 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-md">
                     <span className="font-bold text-[#1a1a1a]">{item.title}</span>
                     <div className="bg-[#1a1a1a] p-2 rounded-full"><ChevronLeft size={16} className="text-brand-cream" /></div>
                   </div>
@@ -212,23 +212,25 @@ const Home = () => {
             {topAttractions.slice(0, 4).map((item) => (
               <motion.div
                 key={item.id}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-50 flex flex-col items-center p-6"
+                className="bg-white rounded-[2rem] overflow-hidden shadow-md border border-gray-50 flex flex-col group"
               >
-                <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6">
+                <div className="w-full aspect-square overflow-hidden relative">
                   <img 
                     src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                     alt={item.title}
                     onError={(e) => {
                       e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
                     }}
                   />
+                  <div className="absolute inset-0 bg-brand-navy opacity-0 group-hover:opacity-10 transition-opacity" />
                 </div>
-                <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">{item.title}</h3>
-                <Link to={`/attractions/${item.id}`} className="w-full">
-                  <Button variant="outline" className="w-full !rounded-full">לפרטים נוספים</Button>
-                </Link>
+                <div className="p-6 flex flex-col items-center text-center">
+                  <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">{item.title}</h3>
+                  <Link to={`/attractions/${item.id}`} className="w-full">
+                    <Button variant="outline" className="w-full !rounded-full">לפרטים נוספים</Button>
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -255,7 +257,7 @@ const Home = () => {
       {/* 8. CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container-max px-4 text-center relative z-10">
-          <div className="max-w-3xl mx-auto py-16 px-8 rounded-[3rem] bg-brand-navy text-[#1a1a1a] shadow-2xl relative">
+          <div className="max-w-3xl mx-auto py-16 px-8 rounded-[3rem] bg-brand-navy text-[#1a1a1a] relative shadow-lg">
             <Sparkles className="absolute top-8 left-8 text-[#1a1a1a] animate-pulse" />
             <Sparkles className="absolute bottom-8 right-8 text-[#1a1a1a] animate-pulse" />
 

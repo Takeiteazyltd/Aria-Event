@@ -35,10 +35,22 @@ const Footer = () => {
           <div className="flex flex-col items-center lg:items-start">
             <h4 className="text-xl font-bold mb-6 text-[#1a1a1a] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-10 after:h-0.5 after:bg-brand-pink">קטלוג אטרקציות</h4>
             <ul className="space-y-4 text-center lg:text-right">
-              <li><Link to="/attractions" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">אטרקציות לאירועים</Link></li>
-              <li><Link to="/bundles" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">חבילות אירוח</Link></li>
-              <li><Link to="/business-events" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">אירועי חברה</Link></li>
-              <li><Link to="/attractions?cat=photo" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">צילום אירועים</Link></li>
+              <li><Link to="/attractions" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                אטרקציות לאירועים
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/bundles" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                חבילות אירוח
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/business-events" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                אירועי חברה
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/attractions?cat=photo" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                צילום אירועים
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
             </ul>
           </div>
 
@@ -46,10 +58,22 @@ const Footer = () => {
           <div className="flex flex-col items-center lg:items-start">
             <h4 className="text-xl font-bold mb-6 text-[#1a1a1a] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-10 after:h-0.5 after:bg-brand-pink">מידע נוסף</h4>
             <ul className="space-y-4 text-center lg:text-right">
-              <li><Link to="/about" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">הסיפור שלנו</Link></li>
-              <li><Link to="/testimonials" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">המלצות לקוחות</Link></li>
-              <li><Link to="/blog" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">בלוג וטיפים</Link></li>
-              <li><Link to="/contact" className="text-[#1a1a1a] hover:opacity-70 transition-colors font-bold">צרו קשר</Link></li>
+              <li><Link to="/about" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                הסיפור שלנו
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/testimonials" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                המלצות לקוחות
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/blog" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                בלוג וטיפים
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
+              <li><Link to="/contact" className="text-[#1a1a1a] hover:text-[#1a1a1a] font-bold relative group inline-block">
+                צרו קשר
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link></li>
             </ul>
           </div>
 
@@ -57,17 +81,26 @@ const Footer = () => {
           <div className="flex flex-col items-center lg:items-start">
             <h4 className="text-xl font-bold mb-6 text-[#1a1a1a] relative pb-2 after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-10 after:h-0.5 after:bg-brand-pink">דברו איתנו</h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-[#1a1a1a] font-bold group">
-                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg group-hover:bg-brand-pink transition-colors"><Phone size={18} /></div>
-                <a href="tel:050-0000000" className="group-hover:opacity-70 transition-colors tracking-wider">050-0000000</a>
+              <li className="flex items-center gap-3 text-[#1a1a1a] font-bold">
+                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg"><Phone size={18} /></div>
+                <a href="tel:050-0000000" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block tracking-wider">
+                  050-0000000
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a>
               </li>
-              <li className="flex items-center gap-3 text-[#1a1a1a] font-bold group">
-                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg group-hover:bg-brand-pink transition-colors"><Mail size={18} /></div>
-                <a href="mailto:info@photo-style.co.il" className="group-hover:opacity-70 transition-colors lowercase">info@photo-style.co.il</a>
+              <li className="flex items-center gap-3 text-[#1a1a1a] font-bold">
+                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg"><Mail size={18} /></div>
+                <a href="mailto:info@photo-style.co.il" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block lowercase">
+                  info@photo-style.co.il
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a>
               </li>
-              <li className="flex items-start gap-3 text-[#1a1a1a] font-bold group">
-                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg group-hover:bg-brand-pink transition-colors mt-0.5"><MapPin size={18} /></div>
-                <span className="group-hover:opacity-70 transition-colors">תל אביב, ישראל</span>
+              <li className="flex items-center gap-3 text-[#1a1a1a] font-bold">
+                <div className="p-2 bg-[#1a1a1a]/10 rounded-lg"><MapPin size={18} /></div>
+                <a href="mailto:info@photo-style.co.il" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block lowercase">
+                  תל אביב, ישראל
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+                </a>
               </li>
             </ul>
           </div>
@@ -76,12 +109,21 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-[#1a1a1a]/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#1a1a1a] font-bold text-sm opacity-90">
-            &copy; {currentYear} Photo Style. כל הזכויות שמורות. נבנה על ידי <span className="text-brand-pink">Antigravity</span>
+            &copy; {currentYear} כל הזכויות שמורות Photo Style
           </p>
           <div className="flex gap-6 text-sm font-bold">
-            <Link to="/privacy" className="text-[#1a1a1a] hover:opacity-70 transition-colors">מדיניות פרטיות</Link>
-            <Link to="/terms" className="text-[#1a1a1a] hover:opacity-70 transition-colors">תנאי שימוש</Link>
-            <Link to="/accessibility" className="text-[#1a1a1a] hover:opacity-70 transition-colors">נגישות</Link>
+            <Link to="/privacy" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block">
+              מדיניות פרטיות
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+            </Link>
+            <Link to="/terms" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block">
+              תנאי שימוש
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+            </Link>
+            <Link to="/accessibility" className="text-[#1a1a1a] hover:text-[#1a1a1a] relative group inline-block">
+              נגישות
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+            </Link>
           </div>
         </div>
       </div>
