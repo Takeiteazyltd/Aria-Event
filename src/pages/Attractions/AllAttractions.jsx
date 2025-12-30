@@ -20,7 +20,7 @@ const AllAttractions = () => {
   return (
     <>
       <Helmet>
-        <title>כל האטרקציות | Aria Event</title>
+        <title>כל האטרקציות | Photo Style</title>
       </Helmet>
 
       {/* Hero */}

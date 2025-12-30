@@ -22,7 +22,7 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | Aria Event</title>
+        <title>{post.title} | Photo Style</title>
         <meta name="description" content={post.excerpt} />
       </Helmet>
 
@@ -55,12 +55,15 @@ const BlogPost = () => {
       <section className="mb-10">
         <div className="w-full h-96 bg-gray-200 overflow-hidden">
           <motion.img
-            src={post.image}
+            src={post.image || 'https://picsum.photos/seed/blog-placeholder/800/600'}
             alt={post.title}
             className="w-full h-full object-cover"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
+            onError={(e) => {
+              e.target.src = 'https://picsum.photos/seed/blog-placeholder/800/600'
+            }}
           />
         </div>
       </section>

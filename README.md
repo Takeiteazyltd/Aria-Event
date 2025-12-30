@@ -1,10 +1,10 @@
-# Aria Event - Premium Hebrew RTL Website
+# Photo Style - Premium Hebrew RTL Website
 
 > A production-grade, fully responsive Hebrew RTL website for Israel's leading event-attractions company.
 
 ## 🎯 Project Overview
 
-Aria Event is a complete, enterprise-scale React website featuring:
+Photo Style is a complete, enterprise-scale React website featuring:
 
 ✅ **11 Full Pages** - Home, Attractions, Bundles, Business Events, About, FAQ, Contact, Testimonials, Blog, and dynamic routing
 ✅ **Complete Component Library** - 30+ reusable, animated components
@@ -27,8 +27,8 @@ Aria Event is a complete, enterprise-scale React website featuring:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Aria-Event.git
-cd Aria-Event
+git clone https://github.com/yourusername/Photo-Style.git
+cd Photo-Style
 
 # Install dependencies
 npm install
@@ -248,7 +248,7 @@ Example from Home page:
 
 ```jsx
 <Helmet>
-  <title>Aria Event - אטרקציות מובילות לאירועים</title>
+  <title>Photo Style - אטרקציות מובילות לאירועים</title>
   <meta name="description" content="..." />
 </Helmet>
 ```
@@ -285,10 +285,10 @@ This project is proprietary. All rights reserved.
 ## 👨‍💻 Support & Questions
 
 For questions or support, contact us at:
-- 📧 Email: info@aria-event.co.il
+- 📧 Email: info@photo-style.co.il
 - 📞 Phone: +972-2-123-4567
 - 💬 WhatsApp: [Chat](https://wa.me/972212344567)
 
 ---
 
-**Built with ❤️ for Aria Event**
+**Built with ❤️ for Photo Style**

@@ -41,7 +41,7 @@ const LeadForm = () => {
                                         <input
                                             type="text"
                                             placeholder="ישראל ישראלי"
-                                            className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-100 focus:border-brand-pink focus:outline-none transition-colors font-semibold"
+                                            className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-pink focus:border-2 focus:outline-none transition-colors font-semibold"
                                         />
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ const LeadForm = () => {
                                         <input
                                             type="tel"
                                             placeholder="050-0000000"
-                                            className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-100 focus:border-brand-pink focus:outline-none transition-colors font-semibold"
+                                            className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-pink focus:border-2 focus:outline-none transition-colors font-semibold"
                                         />
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ const LeadForm = () => {
                                 <label className="block text-brand-navy font-bold mb-2 mr-1">סוג האירוע</label>
                                 <div className="relative">
                                     <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                    <select className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-100 focus:border-brand-pink focus:outline-none transition-colors font-semibold appearance-none bg-white">
+                                    <select className="w-full pr-10 pl-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-pink focus:border-2 focus:outline-none transition-colors font-semibold appearance-none bg-white">
                                         <option>חתונה</option>
                                         <option>בר/בת מצווה</option>
                                         <option>אירוע חברה</option>
@@ -77,7 +77,7 @@ const LeadForm = () => {
                                 <textarea
                                     rows="3"
                                     placeholder="ספרו לנו קצת על האירוע..."
-                                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-brand-pink focus:outline-none transition-colors font-semibold"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-brand-pink focus:border-2 focus:outline-none transition-colors font-semibold"
                                 ></textarea>
                             </div>
 

@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>צור קשר | Aria Event</title>
+        <title>צור קשר | Photo Style</title>
       </Helmet>
 
       {/* Hero */}
@@ -63,8 +63,8 @@ const Contact = () => {
                 <Mail size={24} className="text-primary-600" />
                 <h3 className="text-2xl font-bold">דוא"ל</h3>
               </div>
-              <a href="mailto:info@aria-event.co.il" className="text-gray-700 hover:text-primary-600">
-                info@aria-event.co.il
+              <a href="mailto:info@photo-style.co.il" className="text-gray-700 hover:text-primary-600">
+                info@photo-style.co.il
               </a>
             </div>
 

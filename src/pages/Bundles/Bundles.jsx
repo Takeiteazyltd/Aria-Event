@@ -8,7 +8,7 @@ const Bundles = () => {
   return (
     <>
       <Helmet>
-        <title>חבילות אטרקציות | Aria Event</title>
+        <title>חבילות אטרקציות | Photo Style</title>
       </Helmet>
 
       {/* Hero */}

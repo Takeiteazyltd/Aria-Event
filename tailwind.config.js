@@ -50,7 +50,8 @@ export default {
           pink: '#ffb1b9',
           beige: '#f2f0eb',
           white: '#ffffff',
-          navy: '#202945',
+          navy: '#E0DDD3',
+          cream: '#FFF8E7',
         },
       },
       animation: {
@@ -87,8 +88,8 @@ export default {
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 5px rgba(14, 165, 233, 0.5)' },
-          '50%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.8), 0 0 30px rgba(168, 85, 247, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 5px rgba(255, 177, 185, 0.5)' },
+          '50%': { boxShadow: '0 0 20px rgba(255, 177, 185, 0.8), 0 0 30px rgba(232, 168, 124, 0.6)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
@@ -105,11 +106,11 @@ export default {
         pulseGlow: {
           '0%, 100%': {
             opacity: '1',
-            boxShadow: '0 0 0 0 rgba(14, 165, 233, 0.7)'
+            boxShadow: '0 0 0 0 rgba(255, 177, 185, 0.7)'
           },
           '50%': {
             opacity: '0.8',
-            boxShadow: '0 0 0 10px rgba(14, 165, 233, 0)'
+            boxShadow: '0 0 0 10px rgba(255, 177, 185, 0)'
           },
         },
         gradientShift: {

@@ -22,7 +22,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => {
         </motion.div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold mb-2 text-gray-900">{title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-[#1a1a1a]">{title}</h3>
 
         {/* Description */}
         <p className="text-gray-600">{description}</p>

@@ -21,7 +21,7 @@ const BundleCard = ({ bundle }) => {
         )}
 
         {/* Title */}
-        <h3 className="text-2xl font-bold mb-2 text-gray-900">{bundle.title}</h3>
+        <h3 className="text-2xl font-bold mb-2 text-[#1a1a1a]">{bundle.title}</h3>
 
         {/* Description */}
         <p className="text-gray-600 mb-4">{bundle.description}</p>

@@ -87,3 +87,33 @@ export const validatePhone = (phone) => {
   const re = /^(\+972|\+1|0)[0-9]{9,10}$/
   return re.test(phone)
 }
+
+/**
+ * Generate a placeholder image URL
+ * @param {number} width - Image width in pixels
+ * @param {number} height - Image height in pixels
+ * @param {string} text - Optional text to display on placeholder
+ * @param {string} bgColor - Background color (hex without #)
+ * @param {string} textColor - Text color (hex without #)
+ * @returns {string} Placeholder image URL
+ */
+export const getPlaceholderImage = (width = 800, height = 600, text = '', bgColor = 'cccccc', textColor = '666666') => {
+  const textParam = text ? `&text=${encodeURIComponent(text)}` : ''
+  return `https://placehold.co/${width}x${height}/${bgColor}/${textColor}?font=roboto${textParam}`
+}
+
+/**
+ * Get a placeholder image with default event/attraction styling
+ * @param {number} width - Image width in pixels
+ * @param {number} height - Image height in pixels
+ * @param {string} seed - Optional seed for consistent images
+ * @returns {string} Placeholder image URL
+ */
+export const getEventPlaceholder = (width = 800, height = 600, seed = '') => {
+  // Use a service that provides consistent images based on seed
+  if (seed) {
+    return `https://picsum.photos/seed/${seed}/${width}/${height}`
+  }
+  // Fallback to placehold.co with event-themed colors
+  return `https://placehold.co/${width}x${height}/f0a5c0/ffffff?text=Photo+Style+Event`
+}

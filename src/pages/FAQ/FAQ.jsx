@@ -25,7 +25,7 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>שאלות נפוצות | Aria Event</title>
+        <title>שאלות נפוצות | Photo Style</title>
       </Helmet>
 
       {/* Hero */}

@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 /* RTL Support */
-html[dir="rtl"] {
+html[dir="rtl"],
+html[dir="rtl"] body,
+html[dir="rtl"] #root {
   direction: rtl;
   text-align: right;
 }
@@ -13,6 +15,16 @@ html[dir="rtl"] textarea,
 html[dir="rtl"] select {
   text-align: right;
   direction: rtl;
+}
+
+/* RTL Flexbox adjustments */
+html[dir="rtl"] .flex {
+  direction: rtl;
+}
+
+/* Ensure text alignment is right for RTL */
+html[dir="rtl"] * {
+  text-align: inherit;
 }
 
 /* Global Styles */
@@ -28,12 +40,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   color: #1f2937;
+  direction: rtl;
+  text-align: right;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
-  color: #6b1843;
+  color: #1a1a1a;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -69,21 +83,21 @@ a {
 }
 
 a:hover {
-  color: #0ea5e9;
+  color: #ffb1b9;
   text-decoration: none;
 }
 
 /* Input and Form Enhancements */
 input, textarea, select {
-  border: 2px solid #e2e8f0;
-  transition: all 0.3s ease;
+  border: 2px solid #e5e7eb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #0ea5e9;
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+  border-color: #ffb1b9;
+  border-width: 2px;
+  box-shadow: 0 0 0 3px rgba(255, 177, 185, 0.1), 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 input::placeholder {
@@ -118,12 +132,11 @@ button:active::before {
 }
 
 button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 /* Scrollbar Styling */
@@ -152,13 +165,13 @@ html {
 
 /* Focus Styles for Accessibility */
 :focus-visible {
-  outline: 2px solid #0ea5e9;
+  outline: 2px solid #ffb1b9;
   outline-offset: 2px;
 }
 
 /* Selection Styling */
 ::selection {
-  background-color: #0ea5e9;
+  background-color: #ffb1b9;
   color: white;
 }
 

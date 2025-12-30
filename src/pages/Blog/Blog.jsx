@@ -20,13 +20,13 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>בלוג | Aria Event</title>
+        <title>בלוג | Photo Style</title>
       </Helmet>
 
       {/* Hero */}
       <section className="relative min-h-[400px] flex items-center justify-center pt-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
         <div className="container-max text-center">
-          <h1 className="text-5xl font-bold mb-4">הבלוג של Aria Event</h1>
+          <h1 className="text-5xl font-bold mb-4">הבלוג של Photo Style</h1>
           <p className="text-xl opacity-90">
             טיפים, השראה ורעיונות לאירוע המושלם
           </p>

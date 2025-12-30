@@ -9,6 +9,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/photobooth1/800/600',
     images: [
       'https://picsum.photos/seed/photobooth1/800/600',
       'https://picsum.photos/seed/photobooth2/800/600',
@@ -48,6 +49,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/glasses1/800/600',
     images: [
       'https://picsum.photos/seed/glasses1/800/600',
       'https://picsum.photos/seed/glasses2/800/600',
@@ -87,6 +89,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/360booth1/800/600',
     images: [
       'https://picsum.photos/seed/360booth1/800/600',
       'https://picsum.photos/seed/360booth2/800/600',
@@ -120,6 +123,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/livephoto1/800/600',
     images: [
       'https://picsum.photos/seed/livephoto1/800/600',
       'https://picsum.photos/seed/livephoto2/800/600',
@@ -158,6 +162,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי דרישה',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/smoke1/800/600',
     images: [
       'https://picsum.photos/seed/smoke1/800/600',
       'https://picsum.photos/seed/smoke2/800/600',
@@ -196,6 +201,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי דרישה',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/sparklers1/800/600',
     images: [
       'https://picsum.photos/seed/sparklers1/800/600',
       'https://picsum.photos/seed/sparklers2/800/600',
@@ -234,6 +240,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/polaroid1/800/600',
     images: [
       'https://picsum.photos/seed/polaroid1/800/600',
       'https://picsum.photos/seed/polaroid2/800/600',
@@ -272,6 +279,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/minime1/800/600',
     images: [
       'https://picsum.photos/seed/minime1/800/600',
       'https://picsum.photos/seed/minime2/800/600',
@@ -310,6 +318,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/lasers1/800/600',
     images: [
       'https://picsum.photos/seed/lasers1/800/600',
       'https://picsum.photos/seed/lasers2/800/600',
@@ -348,6 +357,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי דרישה',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/smokecannon1/800/600',
     images: [
       'https://picsum.photos/seed/smokecannon1/800/600',
       'https://picsum.photos/seed/smokecannon2/800/600',
@@ -386,6 +396,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/beams1/800/600',
     images: [
       'https://picsum.photos/seed/beams1/800/600',
       'https://picsum.photos/seed/beams2/800/600',
@@ -424,6 +435,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/fruitship1/800/600',
     images: [
       'https://picsum.photos/seed/fruitship1/800/600',
       'https://picsum.photos/seed/fruitship2/800/600',
@@ -462,6 +474,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי משך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/dj1/800/600',
     images: [
       'https://picsum.photos/seed/dj1/800/600',
       'https://picsum.photos/seed/dj2/800/600',
@@ -500,6 +513,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'עד 3 שעות',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/sequinwall1/800/600',
     images: [
       'https://picsum.photos/seed/sequinwall1/800/600',
       'https://picsum.photos/seed/sequinwall2/800/600',
@@ -538,6 +552,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/sequinletters1/800/600',
     images: [
       'https://picsum.photos/seed/sequinletters1/800/600',
       'https://picsum.photos/seed/sequinletters2/800/600',
@@ -576,6 +591,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/flowerletters1/800/600',
     images: [
       'https://picsum.photos/seed/flowerletters1/800/600',
       'https://picsum.photos/seed/flowerletters2/800/600',
@@ -614,6 +630,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/woodletters1/800/600',
     images: [
       'https://picsum.photos/seed/woodletters1/800/600',
       'https://picsum.photos/seed/woodletters2/800/600',
@@ -652,6 +669,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לפי דרישה',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/confetti1/800/600',
     images: [
       'https://picsum.photos/seed/confetti1/800/600',
       'https://picsum.photos/seed/confetti2/800/600',
@@ -690,6 +708,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/carpet1/800/600',
     images: [
       'https://picsum.photos/seed/carpet1/800/600',
       'https://picsum.photos/seed/carpet2/800/600',
@@ -728,6 +747,7 @@ const attractions = [
     price: 'לפי הצעת מחיר',
     duration: 'לאורך האירוע',
     groupSize: 'ללא הגבלה',
+    image: 'https://picsum.photos/seed/brandwall1/800/600',
     images: [
       'https://picsum.photos/seed/brandwall1/800/600',
       'https://picsum.photos/seed/brandwall2/800/600',

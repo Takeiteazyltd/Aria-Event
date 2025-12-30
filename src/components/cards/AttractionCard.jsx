@@ -17,9 +17,12 @@ const AttractionCard = ({ attraction }) => {
         {/* Image Section */}
         <div className="relative overflow-hidden aspect-[4/3]">
           <motion.img
-            src={attraction.images?.[0] || attraction.image || ''}
+            src={attraction.images?.[0] || attraction.image || 'https://picsum.photos/seed/attraction-placeholder/800/600'}
             alt={attraction.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={(e) => {
+              e.target.src = 'https://picsum.photos/seed/attraction-placeholder/800/600'
+            }}
           />
           <div className="absolute inset-0 bg-brand-navy opacity-0 group-hover:opacity-10 transition-opacity" />
 
@@ -41,7 +44,7 @@ const AttractionCard = ({ attraction }) => {
             {attraction.category}
           </Badge>
 
-          <h3 className="text-xl font-bold mb-3 text-brand-navy">{attraction.title}</h3>
+          <h3 className="text-xl font-bold mb-3 text-[#1a1a1a]">{attraction.title}</h3>
 
           <p className="text-sm text-gray-500 mb-6 flex-grow font-semibold line-clamp-2">
             {attraction.shortDescription}

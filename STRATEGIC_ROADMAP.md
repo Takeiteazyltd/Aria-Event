@@ -1,6 +1,6 @@
-# Aria Event - Strategic Roadmap to #1 Israeli Attractions Website
+# Photo Style - Strategic Roadmap to #1 Israeli Attractions Website
 
-> A comprehensive plan to transform Aria Event into the premier attractions platform in Israel
+> A comprehensive plan to transform Photo Style into the premier attractions platform in Israel
 
 ---
 
@@ -432,7 +432,7 @@ Technology: React + Supabase RLS
   exports.sendBookingConfirmation = async (booking) => {
     await sgMail.send({
       to: booking.user.email,
-      from: 'bookings@aria-event.co.il',
+      from: 'bookings@photo-style.co.il',
       subject: `הזמנתך אושרה - ${booking.attraction.name}`,
       html: `
         <h1>הזמנה מוצלחת!</h1>
@@ -492,7 +492,7 @@ Technology: React + Supabase RLS
   ```json
   // public/manifest.json
   {
-    "name": "Aria Event",
+    "name": "Photo Style",
     "short_name": "Aria",
     "start_url": "/",
     "display": "standalone",
@@ -781,7 +781,7 @@ Setup: 2-3 hours
 | Supabase Pro | $25/mo | Database + Auth |
 | Stripe | $0 | 2.9% + $0.30 per transaction |
 | Sendgrid | $0 | 100 emails free, then $20/mo |
-| Domain | $0-5/yr | Keep aria-event.co.il |
+| Domain | $0-5/yr | Keep photo-style.co.il |
 | Hosting | $0-7/mo | Deploy on Vercel free or Netlify |
 | **TOTAL FIRST MONTH** | **~$30-40** | Ridiculously cheap |
 | **Monthly After** | **~$50-80** | Still very affordable |

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Instagram, Facebook, Phone, Mail } from 'lucide-react'
+import { Menu, X, Instagram, Phone, Mail, MessageCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 import { useApp } from '@context/AppContext'
@@ -41,27 +41,10 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Top Bar: Social | Logo | Utility */}
-      <div className={`container-max flex items-center justify-between py-4 px-4 transition-all duration-300 ${isScrolled ? 'h-0 opacity-0 overflow-hidden py-0' : ''}`}>
-        {/* Left: Social & Contact */}
-        <div className="hidden lg:flex items-center gap-4 text-brand-navy">
-          <a href="#" className="hover:scale-110 transition-transform"><Instagram size={20} /></a>
-          <a href="#" className="hover:scale-110 transition-transform"><Facebook size={20} /></a>
-          <div className="flex items-center gap-1 text-sm font-bold border-r pr-4 border-gray-200">
-            <Phone size={16} />
-            <a href="tel:050-0000000">050-0000000</a>
-          </div>
-        </div>
-
-        {/* Center: Logo */}
-        <div className="flex-1 flex justify-center">
-          <Link to="/" onClick={closeMobileMenu}>
-            <img src="/logo.png" alt="Aria Event Logo" className="h-16 md:h-20 w-auto object-contain" />
-          </Link>
-        </div>
-
-        {/* Right: Secondary Links */}
-        <div className="hidden lg:flex items-center gap-6 text-sm font-bold text-brand-navy">
+      {/* Top Bar: Social | Logo | Utility - Always visible on mobile, hidden on desktop when scrolled */}
+      <div className={`container-max relative flex items-center transition-all duration-300 ${isScrolled ? 'py-4 px-4 lg:h-0 lg:py-0 lg:overflow-hidden' : 'py-16 px-4 lg:py-16 lg:px-4'}`}>
+        {/* Right: Secondary Links - Desktop only (RTL: on the left) */}
+        <div className={`hidden lg:flex items-center justify-start gap-6 text-sm font-bold text-brand-navy transition-all duration-300 flex-1 ${isScrolled ? 'opacity-0 h-0 overflow-hidden' : ''}`}>
           {secondaryLinks.map((link, idx) => (
             <Link key={idx} to={link.href} className="hover:text-brand-pink transition-colors">
               {link.label}
@@ -69,31 +52,82 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Toggle (visible when scrolled or on small screens) */}
+        {/* Mobile Menu Toggle - Always visible on mobile (RTL: on the right) */}
         <button
           onClick={toggleMobileMenu}
-          className="lg:hidden p-2 text-brand-navy"
+          className="lg:hidden absolute right-4 p-2 text-[#1a1a1a] z-10 transition-all duration-300"
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+
+        {/* Center: Logo - Smaller on mobile when scrolled, large when not scrolled */}
+        <div className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-300 ${isScrolled ? 'py-2 lg:py-0' : ''}`}>
+          <Link to="/" onClick={closeMobileMenu}>
+            <img 
+              src="src/public/logos/photostyle-black.png" 
+              alt="Photo Style Logo" 
+              className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-12 lg:opacity-0 lg:h-0' : 'h-24 lg:h-32'}`}
+            />
+          </Link>
+        </div>
+
+        {/* Left: Social & Contact - Desktop only (RTL: on the right) */}
+        <div className={`hidden lg:flex items-center gap-4 text-brand-navy transition-all duration-300 flex-1 justify-end ${isScrolled ? 'opacity-0 h-0 overflow-hidden' : ''}`}>
+          <a href="https://www.instagram.com/photostyle.il?igsh=d3JlbWZldnl3dWN3" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-brand-pink transition-all"><Instagram size={20} /></a>
+          <a href="mailto:morks420@gmail.com" className="hover:scale-110 hover:text-brand-pink transition-all"><Mail size={20} /></a>
+          <a href="https://wa.me/972504258458" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-brand-pink transition-all"><MessageCircle size={20} /></a>
+          <a href="tel:0504258458" className="hover:text-brand-pink transition-colors">
+            <Phone size={20} />
+          </a>
+        </div>
       </div>
 
-      {/* Navigation Bar: Full-width Pink */}
-      <div className={`w-full transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-brand-pink'}`}>
-        <nav className="container-max hidden lg:flex items-center justify-center h-12">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className={`px-6 h-full flex items-center font-bold text-sm transition-all relative group ${isScrolled ? 'text-brand-navy hover:text-brand-pink' : 'text-brand-navy hover:bg-white/10'
-                }`}
-            >
-              {item.label}
-              {isScrolled && (
-                <span className="absolute bottom-0 left-6 right-6 h-0.5 bg-brand-pink scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              )}
+      {/* Navigation Bar: Full-width Pink - Hidden on mobile, visible on desktop */}
+      <div className={`hidden lg:block w-full transition-all duration-300 ${!isScrolled ? 'bg-brand-pink' : 'bg-white shadow-sm'}`}>
+        <nav className={`container-max flex items-center justify-center relative ${isScrolled ? 'py-4 h-auto min-h-[4rem] lg:py-4 lg:h-16' : 'h-16 py-2'}`}>
+          {/* Desktop Logo on the right - Only visible when scrolled */}
+          <div className={`hidden lg:block absolute right-0 pr-4 transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+            <Link to="/" onClick={closeMobileMenu}>
+              <img 
+                src="src/public/logos/photostyle-black.png" 
+                alt="Photo Style Logo" 
+                className="w-auto object-contain h-12 transition-all duration-300" 
+              />
             </Link>
-          ))}
+          </div>
+
+          {/* Desktop Menu Items - Centered */}
+          <div className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 h-full">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="px-6 h-full flex items-center font-bold text-sm text-[#1a1a1a] hover:text-[#1a1a1a] transition-all relative group whitespace-nowrap"
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 right-0 h-1 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Logo - Centered */}
+          <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2 py-1">
+            <Link to="/" onClick={closeMobileMenu}>
+              <img 
+                src="src/public/logos/photostyle-black.png" 
+                alt="Photo Style Logo" 
+                className="w-auto object-contain h-12 transition-all duration-300" 
+              />
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle (RTL: on the right) */}
+          <button
+            onClick={toggleMobileMenu}
+            className="lg:hidden absolute right-4 p-2 text-[#1a1a1a] z-10"
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </nav>
       </div>
 
@@ -111,16 +145,22 @@ const Header = () => {
                 key={item.href}
                 to={item.href}
                 onClick={closeMobileMenu}
-                className="py-3 px-4 text-brand-navy font-bold hover:bg-brand-beige rounded-xl transition-all"
+                className="py-3 px-4 text-[#1a1a1a] font-bold hover:bg-brand-beige rounded-xl transition-all"
               >
                 {item.label}
               </Link>
             ))}
             <div className="grid grid-cols-2 gap-4 mt-4 p-4 border-t border-gray-50">
-              <a href="tel:050-0000000" className="flex items-center justify-center gap-2 py-3 bg-brand-beige text-brand-navy rounded-full font-bold">
+              <a href="tel:0504258458" className="flex items-center justify-center gap-2 py-3 bg-brand-beige text-brand-navy rounded-full font-bold">
                 <Phone size={18} /> התקשרו
               </a>
-              <a href="#" className="flex items-center justify-center gap-2 py-3 bg-brand-pink text-brand-navy rounded-full font-bold">
+              <a href="https://wa.me/972504258458" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 bg-green-500 text-white rounded-full font-bold">
+                <MessageCircle size={18} /> וואטסאפ
+              </a>
+              <a href="mailto:morks420@gmail.com" className="flex items-center justify-center gap-2 py-3 bg-brand-beige text-brand-navy rounded-full font-bold">
+                <Mail size={18} /> אימייל
+              </a>
+              <a href="https://www.instagram.com/photostyle.il?igsh=d3JlbWZldnl3dWN3" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 py-3 bg-brand-pink text-brand-navy rounded-full font-bold">
                 <Instagram size={18} /> אינסטגרם
               </a>
             </div>

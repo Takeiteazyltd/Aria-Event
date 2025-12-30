@@ -13,11 +13,14 @@ const BlogCard = ({ post }) => {
           {/* Image */}
           <div className="relative overflow-hidden h-40 bg-gray-200">
             <motion.img
-              src={post.image}
+              src={post.image || 'https://picsum.photos/seed/blog-card-placeholder/800/600'}
               alt={post.title}
               className="w-full h-full object-cover"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
+              onError={(e) => {
+                e.target.src = 'https://picsum.photos/seed/blog-card-placeholder/800/600'
+              }}
             />
           </div>
 
@@ -29,7 +32,7 @@ const BlogCard = ({ post }) => {
             </Badge>
 
             {/* Title */}
-            <h3 className="text-lg font-bold mb-2 text-gray-900 line-clamp-2">
+            <h3 className="text-lg font-bold mb-2 text-[#1a1a1a] line-clamp-2">
               {post.title}
             </h3>
 

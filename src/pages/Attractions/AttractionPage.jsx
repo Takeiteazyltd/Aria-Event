@@ -30,7 +30,7 @@ const AttractionPage = () => {
   return (
     <>
       <Helmet>
-        <title>{attraction.title} | Aria Event</title>
+        <title>{attraction.title} | Photo Style</title>
         <meta name="description" content={attraction.shortDescription} />
       </Helmet>
 
@@ -48,12 +48,15 @@ const AttractionPage = () => {
       <section className="mb-10">
         <div className="w-full h-96 bg-gray-200 overflow-hidden">
           <motion.img
-            src={attraction.images?.[0] || ''}
+            src={attraction.images?.[0] || attraction.image || 'https://picsum.photos/seed/placeholder/800/600'}
             alt={attraction.title}
             className="w-full h-full object-cover"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
+            onError={(e) => {
+              e.target.src = 'https://picsum.photos/seed/placeholder/800/600'
+            }}
           />
         </div>
       </section>

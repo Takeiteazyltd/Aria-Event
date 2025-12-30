@@ -12,10 +12,10 @@ const Button = ({
   const baseStyles = 'font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer'
 
   const variants = {
-    primary: 'bg-primary-500 text-brand-navy hover:bg-primary-600 shadow-md hover:shadow-lg transition-transform active:scale-95',
-    secondary: 'bg-brand-navy text-white hover:bg-brand-navy/90 shadow-md transition-transform active:scale-95',
-    outline: 'border-2 border-primary-500 text-brand-navy hover:bg-primary-50 font-bold transition-transform active:scale-95',
-    ghost: 'text-brand-navy hover:bg-primary-50 font-bold transition-transform active:scale-95',
+    primary: 'bg-[#1a1a1a] text-brand-cream hover:bg-[#2a2a2a] shadow-md hover:shadow-lg transition-transform active:scale-95',
+    secondary: 'bg-[#1a1a1a] text-brand-cream hover:bg-[#2a2a2a] shadow-md transition-transform active:scale-95',
+    outline: 'border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-brand-cream font-bold transition-transform active:scale-95',
+    ghost: 'text-[#1a1a1a] hover:bg-gray-100 font-bold transition-transform active:scale-95',
   }
 
   const sizes = {

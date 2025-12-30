@@ -15,7 +15,7 @@ const Testimonials = () => {
   return (
     <>
       <Helmet>
-        <title>המלצות מלקוחות | Aria Event</title>
+        <title>המלצות מלקוחות | Photo Style</title>
       </Helmet>
 
       {/* Hero */}
@@ -23,7 +23,7 @@ const Testimonials = () => {
         <div className="container-max text-center">
           <h1 className="text-5xl font-bold mb-4">מה הלקוחות שלנו אומרים</h1>
           <p className="text-xl opacity-90">
-            המלצות מחוזקות מאנשים שחוו את הקסם של Aria Event
+            המלצות מחוזקות מאנשים שחוו את הקסם של Photo Style
           </p>
         </div>
       </section>

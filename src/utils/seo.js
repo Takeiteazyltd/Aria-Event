@@ -2,9 +2,9 @@ export const generateOrganizationSchema = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Aria Event',
-    url: 'https://aria-event.co.il',
-    logo: 'https://aria-event.co.il/logo.png',
+    name: 'Photo Style',
+    url: 'https://photo-style.co.il',
+    logo: 'https://photo-style.co.il/logo.png',
     description: 'אטרקציות מובילות לאירועים בישראל - חתונות, בר מצווה, אירועי חברה',
     contact: {
       '@type': 'ContactPoint',
@@ -13,9 +13,9 @@ export const generateOrganizationSchema = () => {
       availableLanguage: 'he',
     },
     sameAs: [
-      'https://www.facebook.com/ariaevent',
-      'https://www.instagram.com/ariaevent',
-      'https://www.youtube.com/ariaevent',
+      'https://www.facebook.com/photostyle',
+      'https://www.instagram.com/photostyle',
+      'https://www.youtube.com/photostyle',
     ],
   }
 }
@@ -31,7 +31,7 @@ export const generateProductSchema = (attraction) => {
       '@type': 'Offer',
       price: attraction.price?.replace('₪', ''),
       priceCurrency: 'ILS',
-      url: `https://aria-event.co.il/attraction/${attraction.slug}`,
+      url: `https://photo-style.co.il/attraction/${attraction.slug}`,
     },
     aggregateRating: attraction.rating ? {
       '@type': 'AggregateRating',
@@ -52,7 +52,7 @@ export const generateArticleSchema = (post) => {
     dateModified: post.modified || post.date,
     author: {
       '@type': 'Person',
-      name: post.author || 'Aria Event',
+      name: post.author || 'Photo Style',
     },
   }
 }
@@ -76,10 +76,10 @@ export const generateLocalBusinessSchema = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Aria Event',
-    image: 'https://aria-event.co.il/logo.png',
+    name: 'Photo Style',
+    image: 'https://photo-style.co.il/logo.png',
     telephone: '+972-xx-xxxx-xxx',
-    email: 'info@aria-event.co.il',
+    email: 'info@photo-style.co.il',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'כתובת',

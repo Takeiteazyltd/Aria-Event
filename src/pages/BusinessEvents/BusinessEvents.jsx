@@ -8,7 +8,7 @@ const BusinessEvents = () => {
   return (
     <>
       <Helmet>
-        <title>אירועי חברה | Aria Event</title>
+        <title>אירועי חברה | Photo Style</title>
       </Helmet>
 
       {/* Hero */}
@@ -25,7 +25,7 @@ const BusinessEvents = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link to="/contact">
-              <Button variant="primary" size="lg" className="!bg-brand-navy !text-white !border-none hover:opacity-90 !rounded-full">
+              <Button variant="primary" size="lg" className="!rounded-full">
                 קבלת הצעה
               </Button>
             </Link>
@@ -36,7 +36,7 @@ const BusinessEvents = () => {
       {/* Benefits */}
       <section className="py-20 bg-brand-beige">
         <div className="container-max">
-          <h2 className="text-4xl font-bold mb-12 text-center text-brand-navy">מה אנו מציעים לחברות</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-[#1a1a1a]">מה אנו מציעים לחברות</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
             {[
               {
@@ -60,7 +60,7 @@ const BusinessEvents = () => {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-3 text-brand-navy">{item.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-[#1a1a1a]">{item.title}</h3>
                 <p className="text-gray-600 font-semibold">{item.description}</p>
               </motion.div>
             ))}
@@ -76,7 +76,7 @@ const BusinessEvents = () => {
             צוות המומחים שלנו כאן לשעזור בתכנון האירוע השלם
           </p>
           <Link to="/contact">
-            <Button variant="primary" size="lg" className="!bg-brand-navy !text-white !rounded-full shadow-glow-md">
+            <Button variant="primary" size="lg" className="!rounded-full shadow-glow-md">
               צור קשר עכשיו
             </Button>
           </Link>

@@ -88,7 +88,7 @@ const Home = () => {
   return (
     <div className="bg-white">
       <Helmet>
-        <title>Aria Event - יצירת רגעים מאושרים</title>
+        <title>Photo Style - יצירת רגעים מאושרים</title>
         <meta name="description" content="שירותי צילום, אטרקציות והפקה לאירועי חברה ואירועים פרטיים" />
       </Helmet>
 
@@ -119,7 +119,7 @@ const Home = () => {
       <section className="bg-brand-beige py-16 px-4">
         <div className="container-max">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-navy mb-4">יש לכם אירוע?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-4">יש לכם אירוע?</h2>
             <p className="text-lg text-brand-navy font-bold opacity-80 italic">בואו נתחיל לתכנן אותו יחד</p>
           </div>
           <motion.div
@@ -128,9 +128,9 @@ const Home = () => {
             className="bg-white p-6 md:p-8 rounded-[2rem] shadow-xl max-w-5xl mx-auto"
           >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <input type="text" placeholder="שם מלא" className="bg-gray-50 border border-gray-100 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink" />
-              <input type="tel" placeholder="טלפון" className="bg-gray-50 border border-gray-100 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink" />
-              <select className="bg-gray-50 border border-gray-100 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink appearance-none">
+              <input type="text" placeholder="שם מלא" className="bg-gray-50 border-2 border-gray-200 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink focus:border-2" />
+              <input type="tel" placeholder="טלפון" className="bg-gray-50 border-2 border-gray-200 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink focus:border-2" />
+              <select className="bg-gray-50 border-2 border-gray-200 rounded-full px-6 py-3 font-bold focus:outline-none focus:border-brand-pink focus:border-2 appearance-none">
                 <option>סוג אירוע</option>
                 <option>אירוע חברה</option>
                 <option>חתונה</option>
@@ -147,12 +147,12 @@ const Home = () => {
         <div className="container-max px-4">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-navy">הקטגוריות שלנו</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a]">הקטגוריות שלנו</h2>
               <div className="h-1 w-20 bg-brand-pink mt-4 rounded-full"></div>
             </div>
             <div className="flex gap-2">
-              <button onClick={() => categoriesSlider.current?.prev()} className="p-3 bg-brand-beige rounded-full text-brand-navy hover:bg-brand-pink transition-colors"><ChevronRight size={20} /></button>
-              <button onClick={() => categoriesSlider.current?.next()} className="p-3 bg-brand-beige rounded-full text-brand-navy hover:bg-brand-pink transition-colors"><ChevronLeft size={20} /></button>
+              <button onClick={() => categoriesSlider.current?.prev()} className="p-3 bg-brand-beige rounded-full text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-brand-cream transition-colors"><ChevronRight size={20} /></button>
+              <button onClick={() => categoriesSlider.current?.next()} className="p-3 bg-brand-beige rounded-full text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-brand-cream transition-colors"><ChevronLeft size={20} /></button>
             </div>
           </div>
 
@@ -160,10 +160,17 @@ const Home = () => {
             {topAttractions.map((item) => (
               <div key={item.id} className="keen-slider__slide group cursor-pointer">
                 <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg transition-transform hover:scale-[1.02]">
-                  <img src={item.image} className="w-full h-full object-cover" alt={item.title} />
-                  <div className="absolute inset-x-0 bottom-0 p-6 bg-white/90 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-lg">
-                    <span className="font-bold text-brand-navy">{item.title}</span>
-                    <div className="bg-brand-pink p-2 rounded-full"><ChevronLeft size={16} className="text-brand-navy" /></div>
+                  <img 
+                    src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
+                    className="w-full h-full object-cover" 
+                    alt={item.title}
+                    onError={(e) => {
+                      e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
+                    }}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 p-4 bg-white/50 backdrop-blur-md m-4 rounded-[1.5rem] flex items-center justify-between shadow-lg">
+                    <span className="font-bold text-[#1a1a1a]">{item.title}</span>
+                    <div className="bg-[#1a1a1a] p-2 rounded-full"><ChevronLeft size={16} className="text-brand-cream" /></div>
                   </div>
                 </div>
               </div>
@@ -182,7 +189,7 @@ const Home = () => {
         <div className="container-max px-4">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-navy">החבילות שלנו</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a]">החבילות שלנו</h2>
               <div className="h-1 w-20 bg-brand-pink mt-4 rounded-full"></div>
             </div>
           </div>
@@ -200,7 +207,7 @@ const Home = () => {
       {/* 6. featured Products / Grid Section */}
       <section className="py-24 bg-brand-beige">
         <div className="container-max px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-navy mb-16">הכי נמכרים אצלנו</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-16">הכי נמכרים אצלנו</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {topAttractions.slice(0, 4).map((item) => (
               <motion.div
@@ -209,9 +216,16 @@ const Home = () => {
                 className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-50 flex flex-col items-center p-6"
               >
                 <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6">
-                  <img src={item.image} className="w-full h-full object-cover" alt={item.title} />
+                  <img 
+                    src={item.image || item.images?.[0] || 'https://picsum.photos/seed/home-placeholder/800/600'} 
+                    className="w-full h-full object-cover" 
+                    alt={item.title}
+                    onError={(e) => {
+                      e.target.src = 'https://picsum.photos/seed/home-placeholder/800/600'
+                    }}
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-brand-navy mb-4">{item.title}</h3>
+                <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">{item.title}</h3>
                 <Link to={`/attractions/${item.id}`} className="w-full">
                   <Button variant="outline" className="w-full !rounded-full">לפרטים נוספים</Button>
                 </Link>
@@ -227,11 +241,11 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {values.map((v, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <div className="bg-white p-4 rounded-full mb-4 shadow-md">
-                  <v.icon size={28} className="text-brand-navy" />
+                <div className="bg-white p-4 rounded-full mb-4">
+                  <v.icon size={28} className="text-brand-pink" />
                 </div>
-                <h4 className="font-extrabold text-brand-navy text-lg mb-1">{v.title}</h4>
-                <p className="text-sm text-brand-navy/70 font-bold">{v.desc}</p>
+                <h4 className="font-extrabold text-white text-lg mb-1">{v.title}</h4>
+                <p className="text-sm text-white/50 font-bold">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -241,12 +255,12 @@ const Home = () => {
       {/* 8. CTA Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container-max px-4 text-center relative z-10">
-          <div className="max-w-3xl mx-auto py-16 px-8 rounded-[3rem] bg-brand-navy text-white shadow-2xl relative">
-            <Sparkles className="absolute top-8 left-8 text-brand-pink animate-pulse" />
-            <Sparkles className="absolute bottom-8 right-8 text-brand-pink animate-pulse" />
+          <div className="max-w-3xl mx-auto py-16 px-8 rounded-[3rem] bg-brand-navy text-[#1a1a1a] shadow-2xl relative">
+            <Sparkles className="absolute top-8 left-8 text-[#1a1a1a] animate-pulse" />
+            <Sparkles className="absolute bottom-8 right-8 text-[#1a1a1a] animate-pulse" />
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">מחכים לכם!</h2>
-            <p className="text-xl mb-10 opacity-90 font-bold leading-relaxed">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#1a1a1a]">מחכים לכם!</h2>
+            <p className="text-xl mb-10 font-bold leading-relaxed text-[#1a1a1a] opacity-80">
               הצוות שלנו מוכן להפוך את האירוע שלכם להצלחה מסחררת.
               צרו קשר עכשיו וקבלו הצעת מחיר מותאמת אישית.
             </p>
@@ -255,7 +269,7 @@ const Home = () => {
                 <Button variant="primary" size="lg" className="px-12 !h-14 font-extrabold !text-xl shadow-glow-md">להצעת מחיר</Button>
               </Link>
               <a href="tel:050-0000000">
-                <Button variant="outline" size="lg" className="px-12 !h-14 font-extrabold !text-xl !text-white !border-white hover:!bg-white hover:!text-brand-navy transition-all">חייגו עכשיו</Button>
+                <Button variant="outline" size="lg" className="px-12 !h-14 font-extrabold !text-xl">חייגו עכשיו</Button>
               </a>
             </div>
           </div>
