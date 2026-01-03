@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { Star, MapPin, Users, Clock, Check } from 'lucide-react'
+import { Star, MapPin, Users, Clock, Check, ChevronLeft, ChevronRight } from 'lucide-react'
 import { attractions } from '@data/attractions'
 import Button from '@components/ui/Button'
 import Card from '@components/ui/Card'
@@ -12,6 +12,42 @@ import Accordion from '@components/ui/Accordion'
 const AttractionPage = () => {
   const { slug } = useParams()
   const attraction = attractions.find((a) => a.slug === slug)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [autoPlay, setAutoPlay] = useState(true)
+
+  const images = attraction?.images && attraction.images.length > 0
+    ? attraction.images
+    : [attraction?.image || 'https://picsum.photos/seed/placeholder/800/600']
+
+  // Auto-play slideshow
+  useEffect(() => {
+    if (!autoPlay || images.length <= 1) return
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }, 4000) // Change image every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [autoPlay, images.length])
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index)
+    setAutoPlay(false)
+    // Resume auto-play after 10 seconds of user interaction
+    setTimeout(() => setAutoPlay(true), 10000)
+  }
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    setAutoPlay(false)
+    setTimeout(() => setAutoPlay(true), 10000)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
+    setAutoPlay(false)
+    setTimeout(() => setAutoPlay(true), 10000)
+  }
 
   if (!attraction) {
     return (
@@ -46,19 +82,78 @@ const AttractionPage = () => {
 
       {/* Image Gallery */}
       <section className="mb-10">
-        <div className="w-full h-96 bg-gray-200 overflow-hidden">
-          <motion.img
-            src={attraction.images?.[0] || attraction.image || 'https://picsum.photos/seed/placeholder/800/600'}
-            alt={attraction.title}
-            className="w-full h-full object-cover"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            onError={(e) => {
-              e.target.src = 'https://picsum.photos/seed/placeholder/800/600'
-            }}
-          />
+        {/* Main Image Carousel */}
+        <div className="w-full relative bg-gray-200 overflow-hidden group">
+          <div className="w-full h-96 relative">
+            <motion.img
+              key={currentImageIndex}
+              src={images[currentImageIndex]}
+              alt={`${attraction.title} - Image ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              onError={(e) => {
+                e.target.src = 'https://picsum.photos/seed/placeholder/800/600'
+              }}
+            />
+
+            {/* Navigation Arrows */}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition-all z-10 opacity-0 group-hover:opacity-100"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-2 rounded-full transition-all z-10 opacity-0 group-hover:opacity-100"
+                  aria-label="Next image"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </>
+            )}
+
+            {/* Image Counter */}
+            {images.length > 1 && (
+              <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentImageIndex + 1} / {images.length}
+              </div>
+            )}
+          </div>
         </div>
+
+        {/* Thumbnail Gallery */}
+        {images.length > 1 && (
+          <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
+            {images.map((image, idx) => (
+              <motion.button
+                key={idx}
+                onClick={() => goToImage(idx)}
+                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                  idx === currentImageIndex
+                    ? 'border-primary-600 ring-2 ring-primary-400'
+                    : 'border-gray-300 hover:border-gray-400'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <img
+                  src={image}
+                  alt={`Thumbnail ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.src = 'https://picsum.photos/seed/placeholder/100/100'
+                  }}
+                />
+              </motion.button>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Main Content */}
